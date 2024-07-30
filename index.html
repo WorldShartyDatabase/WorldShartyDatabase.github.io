@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chatbot Website</title>
+</head>
+<body>
+    <h1>Welcome to My Simple Chatbot Website</h1>
+    <p>Interact with the chatbot below:</p>
+    <div id="aichatbot"></div>
+    <script>
+        !function(w, d, s, ...args){
+          var div = d.createElement('div');
+          div.id = 'aichatbot';
+          d.body.appendChild(div);
+          w.chatbotConfig = args;
+          var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s);
+          j.defer = true;
+          j.type = 'module';
+          j.src = 'https://aichatbot.sendbird.com/index.js';
+          f.parentNode.insertBefore(j, f);
+        }(window, document, 'script', '9A930A27-609E-46CA-A3CE-4F7474633C82', 'onboarding_bot', {
+          apiHost: 'https://api-cf-us-3.sendbird.com',
+        });
+    </script>
+</body>
+</html>
